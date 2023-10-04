@@ -59,6 +59,7 @@ a{
 .list
 a:hover{
     color: rgb(245, 59, 90);
+    
 }
 
 .search{
@@ -127,7 +128,8 @@ a:hover{
 
 .intro-main{
     width: 100%;
-    display: flex;
+    background-color: #f5f2f2;
+ 
     padding:5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    
@@ -143,8 +145,11 @@ padding: 2% 2%;
 
 .how-to:hover{
     transform: scale(1.1);
+    box-shadow: 5px 5px 10px #2e2d2d;
     
 }
+
+
 
 
 .intro-pic{
@@ -184,9 +189,9 @@ padding: 2% 2%;
 }
 
 .intro2{
-    width: 25%;
-    margin-left: 5%;
-    order: 2;
+    width: 30%;
+    float: right;
+    background-color: #f5f2f2;
     }
 
 .intro2
@@ -195,13 +200,9 @@ h1{
     font-size: 150%;
 }
 
-.intro-2{
-    display: none;
-}
+
 
 .intro2
-.intro-2
-h1
 span{
     background-color: rgb(255, 46, 46);
     color: #ffff;
@@ -212,15 +213,19 @@ span{
     padding: 5% 0%;
     font-size: 90%;
 }
+.heart{
+    width: 5%;
+}
 
 .inner-intro2{
     display: flex;
     padding: 5%;
+    background-color: #ffff;
 }
 
 .inner-intro2
 img{
-    width: 50%;
+    width: 35%;
 }
 
 .inner-intro2
@@ -230,24 +235,72 @@ p{
     margin-left: 5%;
 }
 
+
 /*MEDIA QUERY FOR THE FIRST SECTION*/
 
 @media screen and (max-width: 1023px){
     .intro-main{
         width: 100%;
         display: block;
-        padding:5%;
+        padding:0%;
+       
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        
 
 }
 
+
 .intro2{
-    display: none;
+    float: none;
+    width: 55%;
+    padding: 5% 0%;
+    position: relative;
+    left: 20%;
+    font-size: 20px;
+  
 }
 
-.intro-2{
-    display: block;
+.intro2
+p{
+    width: 100%;
+}
+
+.inner-intro2{
+    width: 60%;
+    position: relative;
+    left: 10%;
+    padding: 2%;
+    background-color: #ffff;
+}
+
+.heart{
+    width: 2%;
+}
+
+.inner-intro2
+img{
+    width: 30%;
+}
+
+
+.how-to{
+   width: 100%;
+   text-align: center;
+ 
+}
+
+.how-to:hover{
+    transform: scale(1.0);
+    box-shadow: 5px 5px 10px #2e2d2d;
+    
+}
+
+.intro-pic{
+    float: none;
+}
+
+.new{
+    display: none;
 }
 
 
@@ -489,16 +542,12 @@ img{
 
 .article-container{
     width: 100%;
-    display: flex;
    padding: 2%;
-   justify-content: space-around;
+   
 }
 
 .articles{
-    width: 60%;
-  
-
-    
+    width: 55%;
 }
 
 .articles-link
@@ -515,7 +564,7 @@ a:hover{
   
 }
 .article-sub{
-    margin-top: 5%;
+    margin-top: 7%;
     
 }
 
@@ -536,8 +585,8 @@ img{
 
 .advert-article{
     margin-top: 3%;
+    float: right;
     width: 40%;
-    margin-left: 5%;
 }
 
 .advert-article:hover
@@ -558,6 +607,29 @@ a:hover{
     color: rgb(245, 59, 90);
    
   
+}
+
+@media screen and (max-width: 1023px){
+    .advert-article{
+        float: none;
+        width: 100%;
+    }
+
+    .advert-article:hover
+{
+transform: scale(1.0);
+}
+
+.articles{
+    width: 100%;
+}
+
+.article-sub{
+    margin-top: 7%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(172, 163, 163);
+    
+}
 }
 
 /*FOR THE TOOLS SECTION*/
@@ -616,50 +688,89 @@ a{
     color: blue;
 }
 
+/*Courses section*/
+
 .courses{
     width: 100%;
-    padding: 2%;
     display: flex;
 }
 
-.courses-img{
+.flex-box{
     width: 50%;
 }
 
-.courses-imgs:hover{
-    transform: scale(1.1);
-}
-
-.courses2{
-    margin-left: 5%;
-    width: 45%;
-    
-}
-
-.courses-multi{
-    
-    display: flex;
-}
-
-.multi{
-    width: 100%;
-    padding-bottom: 5%;
-}
-
-.multi
+.flex-box
 img{
-    width: 70%;
+    width: 100%;
 }
 
-.multi
+.courses-gallery{
+    width: 50%;
+   
+}
+
+.courses-gallery-sub{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.gallery-item{
+    width: 20%;
+    text-align: center;
+    font-size: 13px;
+}
+.gallery-item
+img{
+    width: 100%;
+    box-shadow: 3px 3px 5px#2e2d2d;
+}
+.gallery-item
 img:hover{
     transform: scale(1.1);
 }
 
-.courses-multi
-p{
-    padding-left: 22%;
-    font-size: 80%;
+@media screen and (max-width: 1023px){
+    .courses{
+        width: 100%;
+        display: block;
+    }
+
+    .flex-box{
+        width: 85%;
+        margin-left: 5%;
+    }
+
+    .courses-gallery{
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        margin-top: 5%;
+       
+    }
+
+    .courses-gallery-sub{
+        width: 900px;
+    }
+
+    .gallery-item{
+        width: 300px;
+        text-align: center;
+        font-size: 13px;       
+   }
+    .gallery-item
+    img{
+        width: 200px;
+        box-shadow: 3px 3px 5px#2e2d2d;
+    }
+
+    .gallery-item
+    img:hover{
+        transform: scale(1.button1);
+    }
+    
+    
+    
 }
 
 /*THE SECOND TOOLS SECTION*/
@@ -677,8 +788,8 @@ p{
 
 .tools-sub2{
     border: 1px solid #cceccc;
-
-    padding: 2%;
+    padding: 3%;
+    width: 90%;
     background-color: #ffff;
 }
 
@@ -688,9 +799,30 @@ a{
     color: #000;
 }
 
+.tools2-holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .tools-sub2:hover{
     transform: scale(1.1);
     border:1px solid #008000;
+}
+
+@media screen and (max-width: 1023px){
+    .tools2{
+        display: block;
+        margin-top: 10%;
+       
+    }
+
+    .tools-sub2{
+        margin: 1% ;
+    }
+
+    
+    
 }
 
 /*THE SECOND TOOLS SECTION STARTS HERE*/
@@ -720,11 +852,6 @@ img{
     
 }
 
-.second-pic
-{
-  
-
-}
 
 .two-sided-sub{
     width: 100%;
@@ -821,6 +948,7 @@ a{
 }
 
 
+
 .hr4{
     position: relative;
     margin-top: 3%;
@@ -844,24 +972,19 @@ a{
 /*FOOTER PAGE*/
 
 
-.footer{
-    width: 100%;
-    margin-top: 3%;
-    padding: 2%;
-    
-    justify-content: space-between;
-}
 
 
 footer{
     width: 100%;
+    margin-top: 3%;
     padding: 2%;
-    margin-top: 2%;
-    display: flex;
+    justify-content: space-between
+    
 }
 
 .footer-icon{
     width: 20%;
+    float: left;
     
 }
 
@@ -883,7 +1006,7 @@ img:hover{
 
 .button-container{
     width: 80%;
-    
+    float: right;
     display: flex;
     justify-content: space-around;
     
@@ -896,6 +1019,39 @@ img:hover{
 .button2{
     width: 40%;
 }
+
+@media screen and (max-width: 1023px){
+    .footer-icon{
+        width: 100%;
+        float: none;
+        display: flex;
+        margin-left: 5%;
+    }
+
+    .button-container{
+        width: 100%;
+        margin-left: 5%;
+        float: none;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .button1{
+        width: 50%;
+    }
+    
+    .button2{
+        width: 50%;
+    }
+
+    .icon-flex1
+img{
+    width: 30%;
+}
+
+    
+}
+
 
 
 
